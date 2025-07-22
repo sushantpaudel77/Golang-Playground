@@ -29,10 +29,13 @@ func main() {
 		fmt.Println("no")
 	}
 
+	// declare a varialbe inside if construct
 	if age := 15; age >= 18 {
 		fmt.Println("Person is and adult", age)
 	} else if age >= 12 {
 		fmt.Println("Person is teeneger", age)
 	}
-		
+
+	// go does not have ternary operator, you'll have to use normal if else
+	
 }
