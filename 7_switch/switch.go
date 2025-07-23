@@ -30,7 +30,7 @@ func main() {
 
 	// type switch
 	whoAmI := func(i any) {
-		switch res := i.(type) {
+		switch i.(type) {
 		case int:
 			fmt.Println("it's an integer")
 		case string:
@@ -40,7 +40,7 @@ func main() {
 		case float64:
 			fmt.Println("it's a float")
 		default:
-			fmt.Println("bro i am default too", res)
+			fmt.Println("bro i am default too")
 		}
 	}
 
