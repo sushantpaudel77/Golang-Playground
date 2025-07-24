@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"maps"
+)
 
 // maps -> hash, obj
 func main() {
@@ -22,12 +25,12 @@ func main() {
 	fmt.Println(len(m))
 	clear(m)
 
-	myMap := map[string]int{
+	myMap1 := map[string]int{
 		"price": 70,
 		"phone": 50,
 	}
 
-	_, ok := myMap["phone"]
+	v, ok := myMap1["phone"]
 
 	if ok {
 		fmt.Println("all ok")
@@ -35,14 +38,20 @@ func main() {
 		fmt.Println("not ok")
 	}
 
-	fmt.Println()
+	fmt.Println(v)
+
+	myMap2 := map[string]int{
+		"price": 70,
+		"phone": 50,
+	}
+
+	fmt.Println(maps.Equal(myMap1, myMap2))
 
 	countryCodes := map[string]string{
 		"AU": "Australia",
 		"US": "United States",
 		"FR": "France",
 		"NP": "Nepal",
-
 	}
 
 	// Add a new element
@@ -58,6 +67,5 @@ func main() {
 
 	// Print the whole map
 	fmt.Println(countryCodes)
-
 
 }
