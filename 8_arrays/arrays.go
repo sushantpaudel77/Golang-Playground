@@ -7,6 +7,9 @@ import (
 
 // numbered sequences of specific length
 func main() {
+
+	// int -> 0, string -> "", bool -> false
+
 	// zero values
 	// var nums [4]int
 
@@ -65,4 +68,15 @@ func main() {
 		fmt.Println("Index", i, "value:", val)
 	}
 
+	// to declare in a single line
+	// nums := [3]int{1, 2, 3}
+	// fmt.Println(nums)
+
+	// 2d arrays
+	nums := [2][2]int{{3, 4}, {5, 6}}
+	fmt.Println(nums)
+
+	// - fixed size, that is predicatable
+	// - Memory optimizaiton
+	// - Constant time access
 }
