@@ -33,4 +33,10 @@ func main() {
 	for _, v := range myMap {
 		fmt.Println(v)
 	}
+
+	// unicode code
+	// starting byte of rune
+	for i, c := range "golang is awesome" {
+		fmt.Println(i, string(c))
+	}
 }
