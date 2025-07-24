@@ -20,25 +20,8 @@ func processIt() func(a int) int {
 	}
 }
 
-// callback function type
-type callback func(string)
-
-// function that accepts a callback
-func greet(name string, cb callback) {
-	message := "Hello, " + name
-	cb(message) // invoke the callback
-}
-
-// Actual callback function
-func printMessage(msg string) {
-	fmt.Println("Callback executed with message:", msg)
-}
-
 
 func main() {
-
-	// Passing the function as a callback
-	greet("Golang", printMessage)
 
 	// fn := func(a int) int {
 	// 	return 2
